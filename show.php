@@ -47,10 +47,14 @@ $newDate = strtotime($animal["date_de_naissance"]);
 </head>
 
 <body>
+
+    
     
     <?php include("partials/navbar.php") ?>
 
     <main role="main">
+
+    <img class="showAnimal" src="img/<?=$animal["nom"]?>.jpg" alt="">
 
     <h1><?= $animal["nom"]?></h1>
     <br>

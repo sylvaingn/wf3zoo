@@ -6,7 +6,7 @@ $response = $bdd->query($request);
 $animals = $response->fetchAll(PDO::FETCH_ASSOC);
 
 
-var_dump($animals);
+//var_dump($animals);
 
 
 
@@ -37,6 +37,8 @@ var_dump($animals);
     <main role="main">
 
     <?php include("partials/jumbotron.php"); ?>
+
+    <button><a href="add.php">Créer un animal</a></button>
 
 
     <?php foreach ($animals as $animal) : ?>

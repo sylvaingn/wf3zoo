@@ -15,6 +15,12 @@ if ($animal["sexe"] === "0") {
 elseif ($animal["sexe"] === "1") {
     $newSexe = "Femelle";
 } 
+else {
+    $animal = "Le sexe n'est pas renseigné !";
+}
+
+
+$newDate = strtotime($animal["date_de_naissance"]);
 
 
 
@@ -52,10 +58,10 @@ elseif ($animal["sexe"] === "1") {
     <br>
     <ul>
         <li>Espèce : <?= $animal["espece"]?></li>
-        <li>Sexe : <?= $newSexe?></li>
+        <li>Sexe : <?= $newSexe ?></li>
         <li>Taille (cm) : <?= $animal["taille"]?></li>
         <li>Poids (kg) : <?= $animal["poids"]?></li>
-        <li>Date de naissance : <?= $animal["date_de_naissance"]?></li>
+        <li>Date de naissance : <?= $newDate?></li>
         <li>Pays d'origine : <?= $animal["pays_origine"]?></li>
         
 

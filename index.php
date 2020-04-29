@@ -38,8 +38,6 @@ $animals = $response->fetchAll(PDO::FETCH_ASSOC);
 
     <?php include("partials/jumbotron.php"); ?>
 
-    <button><a href="add.php">Créer un animal</a></button>
-
 
     <?php foreach ($animals as $animal) : ?>
 

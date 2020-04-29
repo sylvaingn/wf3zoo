@@ -60,7 +60,7 @@ $newDate = strtotime($animal["date_de_naissance"]);
     <form method="post" action="update.php?id=<?=$animal["id"]?>">
 
         <div class="form-group">
-            <p>Sélectionner votre rôle :<p>
+            <p>Sélectionner le sexe :<p>
             <select name="sexe"> 
                 
                 <?php if ($animal["sexe"]==0) : ?>

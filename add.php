@@ -37,7 +37,7 @@
     <form method="post" action="create.php">
 
         <div class="form-group">
-            <p>Sélectionner votre rôle :<p>
+            <p>Sélectionner le sexe :<p>
             <select name="sexe">                            
                 <option value="male">Mâle</option>
                 <option value="femelle">Femelle</option>

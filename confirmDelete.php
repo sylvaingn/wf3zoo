@@ -42,7 +42,7 @@ $animal = $response->fetch(PDO::FETCH_ASSOC);
     <section class="jumbotron text-center">
             <div class="container">
                 <h1>Attention</h1>
-                <p class="lead text-muted">Êtes-vous sûr de vouloi supprimer cet animal ?</p>
+                <p class="lead text-muted">Êtes-vous sûr de vouloir supprimer cet animal ?</p>
                 <p>
                     <a href="delete.php?id=<?=$animal["id"]?>" class="btn btn-primary my-2">Oui</a>
                     <a href="index.php" class="btn btn-secondary my-2">Non</a>

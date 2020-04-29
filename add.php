@@ -74,7 +74,7 @@
             <input id="forPays" name ="pays_origine" type="text" class="form-control" required>
         </div>
 
-        <input href="create.php" class="btn btn-primary" name="submit" type="submit" value="Créer un animal">
+        <input class="btn btn-primary" name="submit" type="submit" value="Créer un animal">
     </form>
 
 

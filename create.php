@@ -1,7 +1,7 @@
 <?php
 
 
-//var_dump($_POST);
+var_dump($_POST);
 
 
 $newSexe;
@@ -15,11 +15,23 @@ elseif ($_POST["sexe"] === "femelle") {
 
 
 $bdd = new PDO('mysql:host=localhost;dbname=wf3zoo;charset=utf8;port=8889', 'root', 'root');
-
-$request = "INSERT INTO animal(espece, nom, taille, poids, date_de_naissance, pays_origine, sexe) VALUES ('".$_POST["espece"]."', '".$_POST["nom"]."', '".$_POST["taille"]."', '".$_POST["poids"]."', '".$_POST["date_de_naissance"]."', '".$_POST["pays_origine"]."', '".$newSexe."')";
+$request = "INSERT INTO animal(espece, nom, taille, poids, date_de_naissance, pays_origine, sexe) 
+            VALUES (:espece, :nom, :taille, :poids, :date_de_naissance, :pays_origine, :sexe)";
 //var_dump($request);
-$response = $bdd->query($request);
+$response = $bdd->prepare($request);
+
+$response->execute([
+    "espece"            => $_POST["espece"],
+    "nom"               => $_POST["nom"],
+    "taille"            => $_POST["taille"],
+    "poids"             => $_POST["poids"],
+    "date_de_naissance" => $_POST["date_de_naissance"],
+    "pays_origine"      => $_POST["pays_origine"],
+    "sexe"              => $newSexe,
+]);
+
 $addAnimal = $response->fetchAll(PDO::FETCH_ASSOC);
+
 
 
 
